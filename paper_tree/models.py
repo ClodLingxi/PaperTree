@@ -51,11 +51,13 @@ class Paper:
             for a in data.get('authors', [])
         ]
 
+        reference_list = data.get('references', [])
+
         references = [
             ref.get('paperId')
             for ref in data.get('references', [])
             if ref and ref.get('paperId')
-        ]
+        ] if reference_list else []
 
         return cls(
             paper_id=data.get('paperId', ''),
