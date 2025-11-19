@@ -109,6 +109,7 @@ class SemanticScholarAPI:
             headers['x-api-key'] = self.api_key
 
         for attempt in range(self.max_retries):
+            response = None
             try:
                 response = self.session.post(
                     self.BASE_URL,
@@ -124,7 +125,7 @@ class SemanticScholarAPI:
                 return valid_results
 
             except requests.exceptions.HTTPError as e:
-                if response.status_code == 429:
+                if response and response.status_code == 429:
                     # Rate limit exceeded
                     wait_time = 5 * (attempt + 1)  # Exponential backoff
                     print(f"Rate limit hit (429). Retrying in {wait_time} seconds... "

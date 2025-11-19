@@ -3,15 +3,14 @@ Exporters for saving citation trees to various formats.
 """
 
 import json
-from typing import Optional, Dict
-from pathlib import Path
+from typing import Dict
 
 try:
     import psycopg2
     from psycopg2.extras import Json
     PSYCOPG2_AVAILABLE = True
 except ImportError:
-    PSYCOPG2_AVAILABLE = False
+    raise ImportError("You must install psycopg2 to use this exporter. pip install psycopg2")
 
 from .models import CitationTree
 from .exceptions import ExportError, DatabaseError

@@ -2,7 +2,6 @@
 Unit tests for data models.
 """
 
-import pytest
 from paper_tree.models import Author, Paper, CitationTree
 
 

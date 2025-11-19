@@ -2,7 +2,6 @@
 Citation tree builder for constructing paper citation networks.
 """
 
-from collections import deque
 from typing import Set, Dict, List, Optional
 from .api import SemanticScholarAPI
 from .models import Paper, CitationTree
