@@ -13,9 +13,9 @@ from paper_tree import CitationTreeBuilder
 def main():
     """Run basic citation tree example."""
 
-    # Initialize builder with API key (optional)
+    # Initialize builder with API key (IMPORTANCE)
     # Get your API key from: https://www.semanticscholar.org/product/api
-    api_key = "your_api_key_here"  # Replace with your actual API key
+    api_key = ""  # Replace with your actual API key
     builder = CitationTreeBuilder(api_key=api_key)
 
     print("="*60)

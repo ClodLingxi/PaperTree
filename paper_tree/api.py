@@ -2,6 +2,7 @@
 Semantic Scholar API client for fetching paper data.
 """
 
+import warnings
 import time
 import requests
 from typing import List, Dict, Optional
@@ -29,6 +30,10 @@ class SemanticScholarAPI:
             max_retries: Maximum number of retry attempts for failed requests
         """
         self.api_key = api_key
+
+        if api_key is None or api_key == "":
+            warnings.warn("Semantic Scholar has limit without API")
+
         self.rate_limit_delay = rate_limit_delay
         self.max_retries = max_retries
         self.session = requests.Session()
