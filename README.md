@@ -55,6 +55,8 @@ print(f"Root paper: {tree.root_title}")
 ```python
 from paper_tree import JSONExporter
 
+tree = {""} # Your Json
+
 # Export to JSON file
 exporter = JSONExporter()
 exporter.export(tree, "citation_tree.json")
@@ -64,6 +66,8 @@ exporter.export(tree, "citation_tree.json")
 
 ```python
 from paper_tree import PostgreSQLExporter
+
+tree = {""} # Your Json
 
 # Configure database connection
 db_exporter = PostgreSQLExporter(
@@ -124,6 +128,9 @@ for tree in trees:
 ### Working with Papers
 
 ```python
+
+tree = {""} # Your Json
+
 # Get root paper
 root = tree.get_root_paper()
 print(f"Title: {root.title}")
@@ -257,6 +264,7 @@ While optional, using an API key provides higher rate limits:
 3. Use it when initializing the builder:
 
 ```python
+from paper_tree import CitationTreeBuilder
 builder = CitationTreeBuilder(api_key="your_api_key_here")
 ```
 
@@ -291,7 +299,7 @@ If you use this library in your research, please cite:
   title = {Paper Tree: A Python Library for Citation Tree Analysis},
   author = {Paper Tree Contributors},
   year = {2025},
-  url = {https://github.com/yourusername/paper_tree}
+  url = {https://github.com/clodlingxi/paper_tree}
 }
 ```
 

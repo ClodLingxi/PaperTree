@@ -12,7 +12,7 @@ pip install paper-tree
 pip install paper-tree[postgres]
 
 # From source
-git clone https://github.com/yourusername/paper_tree.git
+git clone https://github.com/clodlingxi/paper_tree.git
 cd paper_tree
 pip install -e .
 ```
@@ -94,7 +94,7 @@ for paper in papers[:10]:
 ## Next Steps
 
 - 📖 Read the [full documentation](README.md)
-- 💡 Check out [examples/](examples/) for more use cases
+- 💡 Check out [examples/](examples) for more use cases
 - 🔧 Learn about [API configuration](README.md#configuration)
 - 🐛 Report issues on [GitHub](https://github.com/yourusername/paper_tree/issues)
 
@@ -110,6 +110,8 @@ for paper in papers[:10]:
 
 ```python
 # Increase delay between requests
+from paper_tree import CitationTreeBuilder
+
 builder = CitationTreeBuilder(rate_limit_delay=2.0)
 ```
 
@@ -139,6 +141,7 @@ pip install paper-tree
 4. **Context Manager**: Use `with` for automatic cleanup
 
 ```python
+from paper_tree import CitationTreeBuilder
 with CitationTreeBuilder() as builder:
     tree = builder.build_tree("ARXIV:1706.03762")
     # Automatically closes connection
