@@ -1,0 +1,5 @@
+# Core dependencies
+requests>=2.28.0
+
+# Optional dependencies (install with pip install paper-tree[postgres])
+# psycopg2-binary>=2.9.0
