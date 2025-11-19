@@ -9,9 +9,10 @@ This library provides tools to:
 
 Basic usage:
     >>> from paper_tree import CitationTreeBuilder
+    >>> from paper_tree import JSONExporter
     >>> builder = CitationTreeBuilder(api_key="your_api_key")
     >>> tree = builder.build_tree("ARXIV:1706.03762", max_depth=2)
-    >>> tree.to_json("output.json")
+    >>> JSONExporter.export(tree, "output.json")
 """
 
 __version__ = "0.1.0"
