@@ -17,7 +17,7 @@ setup(
     description="A Python library for building and analyzing academic paper citation trees",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/paper_tree",
+    url="https://github.com/clodlingxi/paper_tree",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 3 - Alpha",
@@ -61,7 +61,7 @@ setup(
     },
     keywords="citation tree academic papers semantic scholar research",
     project_urls={
-        "Bug Reports": "https://github.com/yourusername/paper_tree/issues",
-        "Source": "https://github.com/yourusername/paper_tree",
+        "Bug Reports": "https://github.com/clodlingxi/paper_tree/issues",
+        "Source": "https://github.com/clodlingxi/paper_tree",
     },
 )

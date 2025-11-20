@@ -96,7 +96,7 @@ for paper in papers[:10]:
 - 📖 Read the [full documentation](README.md)
 - 💡 Check out [examples/](examples) for more use cases
 - 🔧 Learn about [API configuration](README.md#configuration)
-- 🐛 Report issues on [GitHub](https://github.com/yourusername/paper_tree/issues)
+- 🐛 Report issues on [GitHub](https://github.com/clodlingxi/paper_tree/issues)
 
 ## Getting an API Key
 

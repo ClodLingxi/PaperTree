@@ -28,7 +28,7 @@ pip install paper-tree[postgres]
 ### Development Installation
 
 ```bash
-git clone https://github.com/yourusername/paper_tree.git
+git clone https://github.com/clodlingxi/paper_tree.git
 cd paper_tree
 pip install -e .[dev]
 ```
@@ -310,6 +310,6 @@ If you use this library in your research, please cite:
 
 ## Support
 
-- 📫 Issues: [GitHub Issues](https://github.com/yourusername/paper_tree/issues)
-- 📖 Documentation: [GitHub Wiki](https://github.com/yourusername/paper_tree/wiki)
-- 💬 Discussions: [GitHub Discussions](https://github.com/yourusername/paper_tree/discussions)
+- 📫 Issues: [GitHub Issues](https://github.com/clodlingxi/paper_tree/issues)
+- 📖 Documentation: [GitHub Wiki](https://github.com/clodlingxi/paper_tree/wiki)
+- 💬 Discussions: [GitHub Discussions](https://github.com/clodlingxi/paper_tree/discussions)

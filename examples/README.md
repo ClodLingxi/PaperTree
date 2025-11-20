@@ -93,9 +93,7 @@ All examples use a placeholder API key. To use your own:
 
 ```python
 # Replace this line in each example
-api_key = "your_api_key_here"
-
-# With your actual key
+# With your actual S2 API Key
 api_key = "abc123xyz456"
 ```
 
@@ -106,8 +104,7 @@ Get your API key: https://www.semanticscholar.org/product/api
 You can modify these parameters in the examples:
 
 ```python
-# Control tree depth (smaller = faster)
-tree = builder.build_tree("ARXIV:1706.03762", max_depth=1)
+from paper_tree import CitationTreeBuilder
 
 # Change rate limiting
 builder = CitationTreeBuilder(
@@ -116,8 +113,13 @@ builder = CitationTreeBuilder(
     max_retries=5          # Retry up to 5 times
 )
 
+# Control tree depth (smaller = faster)
+tree = builder.build_tree("ARXIV:1706.03762", max_depth=1)
+print(tree.to_dict())
+
 # Use different root paper
 tree = builder.build_tree("ARXIV:1512.03385")  # ResNet paper
+print(tree.to_dict())
 ```
 
 ## Common Papers to Try
@@ -156,12 +158,15 @@ done
 
 ### Rate Limit Errors
 ```python
+from paper_tree import CitationTreeBuilder
 # Increase delay between requests
 builder = CitationTreeBuilder(rate_limit_delay=2.5)
 ```
 
 ### Out of Memory
 ```python
+from paper_tree import CitationTreeBuilder
+builder = CitationTreeBuilder()
 # Reduce max_depth
 tree = builder.build_tree("ARXIV:1706.03762", max_depth=1)
 ```
@@ -191,6 +196,6 @@ After running the examples:
 
 ## Support
 
-- Issues: https://github.com/yourusername/paper_tree/issues
+- Issues: https://github.com/clodlingxi/paper_tree/issues
 - Documentation: ../README.md
 - API Docs: ../docs/
