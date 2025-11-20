@@ -15,7 +15,7 @@ Basic usage:
     >>> JSONExporter.export(tree, "output.json")
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __author__ = "Paper Tree Contributors"
 __license__ = "MIT"
 
